@@ -1,3 +1,9 @@
+ /*
+ Two Sum (if the Array is sorted )
+   Time complexity = 0(n);
+   Space complexity = 0(1);
+   leetcode No = 1
+ */
 
 import java.util.Arrays;  
 class Solution {
