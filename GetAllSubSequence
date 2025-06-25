@@ -1,0 +1,38 @@
+import java.util.*;
+
+/**
+ * Program to generate all subsequences of a given string using recursion.
+ * 
+ * Example:
+ * Input: "abc"
+ * Output: " abc ac ab a bc b c  "
+ * 
+ * Time Complexity: O(2^n)
+ * Space Complexity: O(n) — due to the recursive call stack
+ * 
+ * Date: 2025-06-25
+ */
+
+public class GetAllSubSequence {
+    
+    // Recursive method to generate all subsequences
+    static void GenericSubSequency(String s, String ans) {
+        if (s.length() == 0) {
+            System.out.print(ans);
+            return;
+        }
+
+        // Include current character
+        GenericSubSequency(s.substring(1), ans + s.charAt(0));
+
+        // Exclude current character
+        GenericSubSequency(s.substring(1), ans);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = sc.next();
+        GenericSubSequency(s, " ");
+    }
+}
