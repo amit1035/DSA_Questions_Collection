@@ -8,7 +8,7 @@ This repository contains a curated collection of Data Structures and Algorithms 
 
 ## 📁 File Structure
 
-- `DSA_Quiz.java`: Contains implementations and recursive problems like subsequences, combinations, etc.
+- `DSA_Question_Collection.java`: Contains implementations and recursive problems like subsequences, combinations, etc.
 - More files will be added soon with various DSA topics including arrays, strings, trees, dynamic programming, etc.
 
 ---
