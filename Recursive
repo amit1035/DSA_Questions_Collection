@@ -53,3 +53,37 @@ class Main {
     }
 }
 
+
+/*
+ * Program: Print Fibonacci Sequence using Recursion
+ * Description: Prints the first N Fibonacci numbers using recursion.
+ * Not suitable for LeetCode's fib(n) problem as LeetCode expects only
+ * the nth Fibonacci number as return value, not the full series.
+ */
+
+
+class Solution {
+    public int fib(int n) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+        return fib(n - 1) + fib(n - 2);
+    }
+}
+
+class Solution {
+    public int fib(int n) {
+        int[] memo = new int[n + 1];
+        return helper(n, memo);
+    }
+
+    private int helper(int n, int[] memo) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+        if (memo[n] != 0) return memo[n];
+
+        memo[n] = helper(n - 1, memo) + helper(n - 2, memo);
+        return memo[n];
+    }
+}
+
+
