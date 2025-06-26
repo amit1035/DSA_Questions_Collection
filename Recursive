@@ -24,3 +24,32 @@ class Main {
         printNumber(1, 5, 0);
     }
 }
+
+
+/*
+ * Program: Factorial using Recursion
+ * Description: This program calculates the factorial of a given number `n` 
+ * using a recursive method. The function `factorialNumber` calls itself 
+ * with decremented values until it reaches the base case (n == 1).
+ * 
+ * Example: For input n = 5, the output will be 120 (5*4*3*2*1).
+ */
+
+class Main {
+    
+    public static int factorialNumber(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        int fact = factorialNumber(n - 1);
+        int fact1 = n * fact;
+        return fact1;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        int ans = factorialNumber(n);
+        System.out.print(ans);
+    }
+}
+
