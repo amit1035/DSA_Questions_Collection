@@ -1,0 +1,26 @@
+/*
+ * Program: Recursive Sum from 1 to N
+ * Description: This program demonstrates the use of recursion to calculate 
+ * the sum of numbers from 1 to n. The function `printNumber` is a recursive 
+ * method that accumulates the sum and prints the result once the base 
+ * condition (i == n) is reached.
+ * 
+ * Example: For input (1, 5, 0), the output will be 15 (1+2+3+4+5).
+ */
+
+class Main {
+    
+    public static void printNumber(int i, int n, int sum) {
+        if (i == n) {
+            sum += i;
+            System.out.print(sum);
+            return;
+        }
+        sum += i;
+        printNumber(i + 1, n, sum);
+    }
+    
+    public static void main(String[] args) {
+        printNumber(1, 5, 0);
+    }
+}
